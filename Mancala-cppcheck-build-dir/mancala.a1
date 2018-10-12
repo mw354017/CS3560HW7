@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1991811066">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;temp&apos; can be reduced." verbose="The scope of the variable &apos;temp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/mattraywagner/Documents/HW6/CS3560HW7/mancala.cpp" line="142"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;temp&apos; is assigned a value that is never used." verbose="Variable &apos;temp&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/mattraywagner/Documents/HW6/CS3560HW7/mancala.cpp" line="146"/>
+        </error>
+        <error id="arrayIndexThenCheck" severity="style" msg="Array index &apos;temp&apos; is used before limits check." verbose="Defensive programming: The variable &apos;temp&apos; is used as an array index before it is checked that is within limits. This can mean that the array might be accessed out of bounds. Reorder conditions such as &apos;(a[i] &amp;&amp; i &lt; 10)&apos; to &apos;(i &lt; 10 &amp;&amp; a[i])&apos;. That way the array will not be accessed if the index is out of limits." cwe="398">
+            <location file="/home/mattraywagner/Documents/HW6/CS3560HW7/mancala.cpp" line="101"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;mancala::move_number&apos; is not initialized in the constructor." verbose="Member variable &apos;mancala::move_number&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/mattraywagner/Documents/HW6/CS3560HW7/mancala.cpp" line="16"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="display_status" lineNumber="33"/>
+    <functiondecl functionName="make_move" lineNumber="47"/>
+    <functiondecl functionName="show_stones" lineNumber="117"/>
+    <functiondecl functionName="clone" lineNumber="134"/>
+    <functiondecl functionName="compute_moves" lineNumber="140"/>
+    <functiondecl functionName="evaluate" lineNumber="159"/>
+    <functiondecl functionName="is_game_over" lineNumber="165"/>
+    <functiondecl functionName="is_legal" lineNumber="196"/>
+    <functiondecl functionName="restart" lineNumber="225"/>
+    <functiondecl functionName="winning" lineNumber="238"/>
+    <functioncall functionName="COMPUTER"/>
+    <functioncall functionName="HUMAN"/>
+    <functioncall functionName="NEUTRAL"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cup"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="game"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="last_mover"/>
+    <functioncall functionName="make_move"/>
+    <functioncall functionName="mancala"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="opposite_cup"/>
+    <functioncall functionName="push"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="show_stones"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="temp_stones"/>
+  </FileInfo>
+</analyzerinfo>

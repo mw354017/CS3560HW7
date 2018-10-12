@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.82 dev"/>
+    <errors>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;value&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;value&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here\012        for (int n = 0; n &amp;lt; 10; ++n) {\012            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here\012            do_something(&amp;amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." sinceDate="10/11/18">
+            <location file="game.cpp" line="83"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;value&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;value&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here\012        for (int n = 0; n &amp;lt; 10; ++n) {\012            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here\012            do_something(&amp;amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." sinceDate="10/11/18">
+            <location file="game.cpp" line="123"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;temp&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;temp&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here\012        for (int n = 0; n &amp;lt; 10; ++n) {\012            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here\012            do_something(&amp;amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." sinceDate="10/11/18">
+            <location file="mancala.cpp" line="142"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;temp&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;temp&amp;#039; is assigned a value that is never used." sinceDate="10/11/18">
+            <location file="mancala.cpp" line="146"/>
+        </error>
+        <error id="arrayIndexThenCheck" severity="style" msg="Array index &amp;#039;temp&amp;#039; is used before limits check." verbose="Defensive programming: The variable &amp;#039;temp&amp;#039; is used as an array index before it is checked that is within limits. This can mean that the array might be accessed out of bounds. Reorder conditions such as &amp;#039;(a[i] &amp;amp;&amp;amp; i &amp;lt; 10)&amp;#039; to &amp;#039;(i &amp;lt; 10 &amp;amp;&amp;amp; a[i])&amp;#039;. That way the array will not be accessed if the index is out of limits." sinceDate="10/11/18">
+            <location file="mancala.cpp" line="101"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &amp;#039;mancala::move_number&amp;#039; is not initialized in the constructor." verbose="Member variable &amp;#039;mancala::move_number&amp;#039; is not initialized in the constructor." sinceDate="10/11/18">
+            <location file="mancala.cpp" line="16"/>
+        </error>
+    </errors>
+</results>

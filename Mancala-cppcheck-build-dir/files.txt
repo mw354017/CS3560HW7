@@ -1,0 +1,3 @@
+game.a1::/home/mattraywagner/Documents/HW6/CS3560HW7/game.cpp
+main.a1::/home/mattraywagner/Documents/HW6/CS3560HW7/main.cpp
+mancala.a1::/home/mattraywagner/Documents/HW6/CS3560HW7/mancala.cpp

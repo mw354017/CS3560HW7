@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="81793257">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="13"/>
+    <functioncall functionName="COMPUTER"/>
+    <functioncall functionName="HUMAN"/>
+    <functioncall functionName="NEUTRAL"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="game"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="play"/>
+    <functioncall functionName="return"/>
+  </FileInfo>
+</analyzerinfo>

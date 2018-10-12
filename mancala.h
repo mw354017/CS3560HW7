@@ -56,4 +56,3 @@ namespace main_savitch_14
     };
 }
 #endif // MANCALA_H
-
